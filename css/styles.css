@@ -25,6 +25,11 @@ img {
   display: block;
 }
 
+h2 {
+  font-weight: 700;
+  font-size: 1.683rem;
+}
+
 /* Globales */
 
 a {
@@ -64,8 +69,9 @@ a {
 
 .background-header {
   background-image: url(../images/pattern.svg), url(../images/bg.svg);
-  background-size: 100%;
+  background-size: 100%, 70rem;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .header-mobile {
@@ -98,8 +104,8 @@ a {
 }
 
 .rocket {
-  filter: invert(44%) sepia(97%) saturate(387%) hue-rotate(102deg)
-    brightness(91%) contrast(79%);
+  /* filter: invert(44%) sepia(97%) saturate(387%) hue-rotate(102deg)
+    brightness(91%) contrast(79%); */
   width: 4rem;
 }
 
@@ -149,7 +155,23 @@ a {
 
 /* Hero */
 
-.hero h1 {
-  padding-bottom: 50rem;
+.hero {
+  margin-top: 1rem;
+}
+
+.hero h2 {
   color: var(--blanco);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video video {
+  width: 90%;
+  border-radius: 2.5rem;
 }
