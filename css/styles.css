@@ -1,6 +1,7 @@
 :root {
   --blanco: #fff;
   --negro: #000;
+  --primary-color: #22b573;
 }
 
 html {
@@ -36,28 +37,51 @@ a {
   margin: 0 auto;
 }
 
+.btn-secondary {
+  color: var(--primary-color);
+  font-size: 1.41rem;
+  font-weight: 700;
+  padding: 1.4rem 2rem;
+  background-color: var(--blanco);
+  border-radius: 1.15rem;
+}
+
+/* Utilidades */
+
+.text-center {
+  text-align: center !important;
+}
+
+.active {
+  color: var(--primary-color) !important;
+}
+
 /* Header */
 
+.menu-desktop {
+  display: none;
+}
+
 .background-header {
-  background-image: url(../images/bg.svg);
+  background-image: url(../images/pattern.svg), url(../images/bg.svg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
-.header {
+.header-mobile {
   padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header .logo-fares {
+.header-mobile .logo-fares {
   display: flex;
   gap: 0.3rem;
   align-items: center;
 }
 
-.header .logo-fares p {
+.header-mobile .logo-fares p {
   font-weight: 700;
   font-style: italic;
   font-size: 2.4rem;
@@ -65,10 +89,62 @@ a {
   margin: 0;
 }
 
+.btn-comenzar {
+  display: none;
+}
+
+.header-desktop {
+  display: none;
+}
+
 .rocket {
   filter: invert(44%) sepia(97%) saturate(387%) hue-rotate(102deg)
     brightness(91%) contrast(79%);
   width: 4rem;
+}
+
+@media (min-width: 768px) {
+  .header-mobile {
+    display: none;
+  }
+  .rocket {
+    width: 5rem;
+  }
+  .logo-fares p {
+    font-size: 2.9rem !important;
+    margin-right: 3rem !important;
+  }
+  .header-desktop {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-desktop .logo-fares {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+  }
+  .header-desktop .logo-fares p {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2.4rem;
+    color: var(--blanco);
+    margin: 0;
+  }
+  .logo-menu-items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .menu-item {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--blanco);
+  }
+  .btn-comenzar {
+    display: unset;
+  }
 }
 
 /* Hero */
