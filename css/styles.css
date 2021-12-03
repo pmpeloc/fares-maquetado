@@ -1,0 +1,79 @@
+:root {
+  --blanco: #fff;
+  --negro: #000;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Globales */
+
+a {
+  text-decoration: none;
+  color: var(--negro);
+}
+
+.container {
+  width: min(90%, 117.6rem);
+  margin: 0 auto;
+}
+
+/* Header */
+
+.background-header {
+  background-image: url(../images/bg.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.header {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo-fares {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.header .logo-fares p {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2.4rem;
+  color: var(--blanco);
+  margin: 0;
+}
+
+.rocket {
+  filter: invert(44%) sepia(97%) saturate(387%) hue-rotate(102deg)
+    brightness(91%) contrast(79%);
+  width: 4rem;
+}
+
+/* Hero */
+
+.hero h1 {
+  padding-bottom: 50rem;
+  color: var(--blanco);
+}
